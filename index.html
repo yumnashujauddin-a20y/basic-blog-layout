@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="10 simple ways to improve your daily productivity and accomplish more with less stress.">
+
+    <title>10 Simple Ways to Improve Your Daily Productivity</title>
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+            background: #f5f7fb;
+            color: #252a34;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: linear-gradient(135deg, #111827, #312e81);
+            color: white;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 25px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a5b4fc;
+        }
+
+        /* =========================
+           BLOG CONTAINER
+        ========================== */
+
+        main {
+            width: min(900px, 92%);
+            margin: 55px auto;
+        }
+
+        article {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(31, 41, 55, 0.10);
+        }
+
+        /* =========================
+           ARTICLE HEADER
+        ========================== */
+
+        .article-header {
+            padding: 55px 65px 35px;
+            text-align: center;
+        }
+
+        .category {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 7px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2.1rem, 5vw, 3.7rem);
+            line-height: 1.15;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            max-width: 680px;
+            margin: auto;
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+        .meta {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .author {
+            color: #4f46e5;
+            font-weight: 700;
+        }
+
+        .dot {
+            width: 5px;
+            height: 5px;
+            background: #9ca3af;
+            border-radius: 50%;
+        }
+
+        /* =========================
+           HERO IMAGE
+        ========================== */
+
+        .hero-image {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.85rem;
+            font-style: italic;
+            padding: 12px 20px;
+            background: #fafafa;
+        }
+
+        /* =========================
+           ARTICLE CONTENT
+        ========================== */
+
+        .content {
+            padding: 45px 65px 60px;
+        }
+
+        .content section {
+            margin-bottom: 45px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #111827;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 45px;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+            border-radius: 10px;
+            margin-top: 7px;
+        }
+
+        p {
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           PRODUCTIVITY LIST
+        ========================== */
+
+        .tips {
+            list-style: none;
+            counter-reset: productivity;
+            margin-top: 25px;
+        }
+
+        .tips li {
+            counter-increment: productivity;
+            position: relative;
+            padding: 22px 25px 22px 80px;
+            margin-bottom: 18px;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tips li::before {
+            content: counter(productivity);
+            position: absolute;
+            left: 22px;
+            top: 21px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            font-weight: 800;
+            border-radius: 12px;
+        }
+
+        .tips li:hover {
+            transform: translateY(-4px);
+            border-color: #c7d2fe;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.10);
+        }
+
+        .tips strong {
+            display: block;
+            color: #1f2937;
+            font-size: 1.05rem;
+            margin-bottom: 3px;
+        }
+
+        /* =========================
+           QUOTE
+        ========================== */
+
+        blockquote {
+            margin: 35px 0;
+            padding: 25px 30px;
+            border-left: 5px solid #6366f1;
+            background: #eef2ff;
+            border-radius: 0 15px 15px 0;
+            color: #3730a3;
+            font-size: 1.15rem;
+            font-style: italic;
+        }
+
+        /* =========================
+           CONCLUSION
+        ========================== */
+
+        .conclusion {
+            background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #e0e7ff;
+        }
+
+        /* =========================
+           READ MORE BUTTON
+        ========================== */
+
+        .read-more-wrapper {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.35);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            main {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .article-header {
+                padding: 40px 25px 30px;
+            }
+
+            .content {
+                padding: 35px 25px 45px;
+            }
+
+            .hero-image {
+                height: 260px;
+            }
+
+            .meta {
+                flex-wrap: wrap;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .tips li {
+                padding: 20px 18px 20px 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         SITE HEADER
+    ========================== -->
+
+    <header>
+        <div class="navbar">
+
+            <div class="logo">
+                YUMNA BLOG
+            </div>
+
+            <nav aria-label="Main navigation">
+                <a href="#introduction">Introduction</a>
+                <a href="#tips">Tips</a>
+                <a href="#conclusion">Conclusion</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <article>
+
+            <!-- Article Heading -->
+            <header class="article-header">
+
+                <span class="category">Productivity</span>
+
+                <h1>
+                    10 Simple Ways to Improve Your Daily Productivity
+                </h1>
+
+                <p class="subtitle">
+                    Small changes to your daily routine can help you
+                    manage your time better and accomplish more with less stress.
+                </p>
+
+                <div class="meta">
+                    <span>Published on September 23, 2026</span>
+                    <span class="dot"></span>
+                    <span>By <span class="author">Yumna</span></span>
+                </div>
+
+            </header>
+
+
+            <!-- Featured Image -->
+            <figure>
+
+                <img
+                    class="hero-image"
+                    src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80"
+                    alt="Laptop, notebook and coffee on a productive workspace"
+                >
+
+                <figcaption class="image-caption">
+                    Creating a focused workspace can improve productivity.
+                </figcaption>
+
+            </figure>
+
+
+            <!-- Blog Content -->
+            <div class="content">
+
+                <!-- Introduction -->
+                <section id="introduction">
+
+                    <h2>Introduction</h2>
+
+                    <p>
+                        Being productive does not always mean working longer hours.
+                        True productivity is about using your time and energy wisely.
+                    </p>
+
+                    <p>
+                        By making a few simple changes to your everyday routine,
+                        you can stay focused, reduce distractions, and accomplish
+                        your most important goals without unnecessary stress.
+                    </p>
+
+                </section>
+
+
+                <!-- Main Content -->
+                <section id="tips">
+
+                    <h2>10 Simple Productivity Tips</h2>
+
+                    <p>
+                        Here are ten practical habits that can help you make
+                        every day more organized and productive:
+                    </p>
+
+                    <ol class="tips">
+
+                        <li>
+                            <strong>Start Your Day With a Plan</strong>
+                            Write down your most important tasks before
+                            beginning your day.
+                        </li>
+
+                        <li>
+                            <strong>Prioritize Important Tasks</strong>
+                            Focus on high-value tasks instead of spending
+                            your energy on less important work.
+                        </li>
+
+                        <li>
+                            <strong>Use the Two-Minute Rule</strong>
+                            If something takes less than two minutes,
+                            try to complete it immediately.
+                        </li>
+
+                        <li>
+                            <strong>Remove Distractions</strong>
+                            Turn off unnecessary notifications and create
+                            a workspace that helps you concentrate.
+                        </li>
+
+                        <li>
+                            <strong>Take Regular Breaks</strong>
+                            Short breaks can refresh your mind and help
+                            maintain your concentration.
+                        </li>
+
+                        <li>
+                            <strong>Keep Your Workspace Organized</strong>
+                            A clean and organized workspace can make it
+                            easier to focus on your work.
+                        </li>
+
+                        <li>
+                            <strong>Avoid Multitasking</strong>
+                            Complete one important task at a time instead
+                            of constantly switching between activities.
+                        </li>
+
+                        <li>
+                            <strong>Set Realistic Goals</strong>
+                            Break large goals into smaller steps that are
+                            easier to complete.
+                        </li>
+
+                        <li>
+                            <strong>Learn to Say No</strong>
+                            Protect your time by avoiding unnecessary
+                            commitments when possible.
+                        </li>
+
+                        <li>
+                            <strong>Review Your Day</strong>
+                            Spend a few minutes reviewing what you accomplished
+                            and planning for tomorrow.
+                        </li>
+
+                    </ol>
+
+                </section>
+
+
+                <!-- Quote -->
+                <blockquote>
+                    "Productivity isn't about doing more things.
+                    It's about doing the right things better."
+                </blockquote>
+
+
+                <!-- Conclusion -->
+                <section id="conclusion">
+
+                    <div class="conclusion">
+
+                        <h2>Conclusion</h2>
+
+                        <p>
+                            Improving productivity does not require a complete
+                            change in your lifestyle. Start with one or two
+                            simple habits and gradually build a routine that
+                            works for you.
+                        </p>
+
+                        <p>
+                            Remember, the goal is not to stay busy all day.
+                            The goal is to spend your time intentionally and
+                            make meaningful progress toward what matters most.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Read More -->
+                <div class="read-more-wrapper">
+
+                    <a
+                        class="read-more"
+                        href="#"
+                        aria-label="Read more productivity articles"
+                    >
+                        Read More →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <p>© 2026 Yumna Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
